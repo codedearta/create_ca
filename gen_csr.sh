@@ -1,6 +1,6 @@
 fqdn=dearta.com
 
-sudo rm -rf *.csr *.key *.cnf
+sudo rm -rf ${fqdn}.csr ${fqdn}.key ${fqdn}.cnf
 
 echo "[req]
 default_bits = 2048
@@ -32,8 +32,8 @@ DNS.4 = www.dearta.ch
 DNS.5 = dearta.co.uk
 DNS.6 = www.dearta.co.uk
 DNS.7 = dearta.london
-DNS.8 = www.dearta.london" | sudo tee csr.cnf
+DNS.8 = www.dearta.london" | sudo tee ${fqdn}.cnf
 
-sudo openssl req -newkey rsa:2048 -config csr.cnf -out ${fqdn}.csr
+sudo openssl req -newkey rsa:2048 -config ${fqdn}.cnf -out ${fqdn}.csr
 
 sudo openssl req -text -noout -in ${fqdn}.csr
