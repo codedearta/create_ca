@@ -1,9 +1,5 @@
 #!/bin/bash
 
-fqdn=dearta.com
-
-sudo rm -rf ${fqdn}.csr ${fqdn}.key ${fqdn}.cnf
-
 echo "[req]
 default_bits = 2048
 default_keyfile = ${fqdn}.key 
