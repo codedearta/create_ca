@@ -43,4 +43,4 @@ sudo echo '01' | sudo tee serial
 sudo openssl ca -config sign.cnf -extfile ext.sign.cnf -out ${fqdn}.cert -infiles ${fqdn}.csr
 
 cat ${fqdn}.key ${fqdn}.cert | sudo tee ${fqdn}.pem # use for mongod-tls
-cat ${fqdn}.crt ca.crt | sudo tee ${fqdn}.bundle.crt  # use for https
+cat ${fqdn}.cert ca.cert | sudo tee ${fqdn}.bundle.cert  # use for https
