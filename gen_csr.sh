@@ -24,13 +24,9 @@ subjectKeyIdentifier = hash
 
 [san]
 DNS.1 = ${fqdn}
-DNS.2 = www.${fqdn}
-DNS.3 = dearta.ch
-DNS.4 = www.dearta.ch
-DNS.5 = dearta.co.uk
-DNS.6 = www.dearta.co.uk
-DNS.7 = dearta.london
-DNS.8 = www.dearta.london" | sudo tee ${fqdn}.cnf
+DNS.2 = opsman1.${fqdn}
+DNS.3 = opsman2.${fqdn}
+DNS.4 = opsman3.${fqdn}" | sudo tee ${fqdn}.cnf
 
 sudo openssl req -newkey rsa:2048 -config ${fqdn}.cnf -out ${fqdn}.csr
 
