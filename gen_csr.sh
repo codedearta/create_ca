@@ -1,3 +1,5 @@
+#!/bin/bash
+
 fqdn=dearta.com
 
 sudo rm -rf ${fqdn}.csr ${fqdn}.key ${fqdn}.cnf
