@@ -27,4 +27,4 @@ subjectKeyIdentifier = hash" | sudo tee ca.cnf
 
 sudo openssl req -x509 -newkey rsa:2048 -config ca.cnf -out ca.cert
 
-sudo openssl req -text -noout -in ca.cert
+sudo openssl x509 -text -noout -in ca.cert
