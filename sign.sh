@@ -36,6 +36,8 @@ DNS.6 = www.dearta.co.uk
 DNS.7 = dearta.london
 DNS.8 = www.dearta.london" | sudo tee ext.sign.cnf
 
+sudo rm -rf newcerts
+sudo rm -rf index.txt
 sudo mkdir newcerts
 sudo touch index.txt
 sudo echo '01' | sudo tee serial
